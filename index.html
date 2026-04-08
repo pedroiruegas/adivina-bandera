@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flag Quiz — Adivina la Bandera</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+    <span class="icon-sun">☀️</span>
+    <span class="icon-moon">🌙</span>
+  </button>
+
+  <!-- PANTALLA: Inicio -->
+  <div class="screen active" id="screen-home">
+    <div class="home-content">
+      <div class="logo-mark">🌍</div>
+      <h1 class="title">Flag<span class="accent">Quiz</span></h1>
+      <p class="subtitle">¿Cuántas banderas del mundo reconoces?</p>
+
+      <div class="mode-selector">
+        <p class="mode-label">Dificultad</p>
+        <div class="mode-options">
+          <button class="mode-btn active" data-rounds="10" data-options="3">Fácil<span>10 rondas · 3 opciones</span></button>
+          <button class="mode-btn" data-rounds="15" data-options="4">Normal<span>15 rondas · 4 opciones</span></button>
+          <button class="mode-btn" data-rounds="20" data-options="5">Difícil<span>20 rondas · 5 opciones</span></button>
+        </div>
+      </div>
+
+      <button class="btn-start" id="btnStart">Jugar →</button>
+
+      <p class="credit">Banderas: <a href="https://flagcdn.com" target="_blank">flagcdn.com</a></p>
+    </div>
+  </div>
+
+  <!-- PANTALLA: Juego -->
+  <div class="screen" id="screen-game">
+    <header class="game-header">
+      <div class="hud-item">
+        <span class="hud-val" id="hudScore">0</span>
+        <span class="hud-lbl">puntos</span>
+      </div>
+      <div class="progress-wrap">
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        <span class="progress-text" id="progressText">1 / 15</span>
+      </div>
+      <div class="hud-item">
+        <span class="hud-val" id="hudStreak">0</span>
+        <span class="hud-lbl">racha 🔥</span>
+      </div>
+    </header>
+
+    <main class="game-main">
+      <div class="flag-stage">
+        <div class="flag-wrap" id="flagWrap">
+          <img class="flag-img" id="flagImg" src="" alt="Bandera" />
+        </div>
+        <p class="continent-tag" id="continentTag"></p>
+      </div>
+
+      <p class="question-text">¿De qué país es esta bandera?</p>
+
+      <div class="options-grid" id="optionsGrid"></div>
+
+      <div class="feedback-bar" id="feedbackBar">
+        <span class="feedback-msg" id="feedbackMsg"></span>
+        <button class="btn-next" id="btnNext">Siguiente →</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- PANTALLA: Resultado -->
+  <div class="screen" id="screen-result">
+    <div class="result-content">
+      <div class="result-emoji" id="resultEmoji"></div>
+      <h2 class="result-title" id="resultTitle"></h2>
+      <p class="result-score" id="resultScore"></p>
+      <p class="result-msg" id="resultMsg"></p>
+
+      <div class="result-stats">
+        <div class="stat-card">
+          <span class="stat-val" id="statCorrect">0</span>
+          <span class="stat-lbl">correctas</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-val" id="statWrong">0</span>
+          <span class="stat-lbl">incorrectas</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-val" id="statBestStreak">0</span>
+          <span class="stat-lbl">mejor racha</span>
+        </div>
+      </div>
+
+      <div class="result-actions">
+        <button class="btn-start" id="btnRestart">Jugar de nuevo →</button>
+        <button class="btn-outline" id="btnHome">Inicio</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
