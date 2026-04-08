@@ -53,24 +53,33 @@ body::before {
 }
 
 /* ===== THEME TOGGLE ===== */
+.home-top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: -0.5rem;
+}
 .theme-toggle {
-  position: fixed;
-  top: 1.25rem;
-  right: 1.25rem;
-  z-index: 100;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 999px;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 17px;
   transition: background 0.2s, transform 0.15s;
+  flex-shrink: 0;
 }
 .theme-toggle:hover { transform: scale(1.08); }
+/* Variante dentro del header del juego */
+.theme-toggle--header {
+  width: 36px;
+  height: 36px;
+  font-size: 15px;
+}
 [data-theme="dark"] .icon-sun  { display: none; }
 [data-theme="light"] .icon-moon { display: none; }
 

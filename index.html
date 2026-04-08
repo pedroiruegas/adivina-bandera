@@ -10,14 +10,15 @@
 </head>
 <body>
 
-  <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-    <span class="icon-sun">☀️</span>
-    <span class="icon-moon">🌙</span>
-  </button>
-
   <!-- PANTALLA: Inicio -->
   <div class="screen active" id="screen-home">
     <div class="home-content">
+      <div class="home-top-bar">
+        <button class="theme-toggle" id="themeToggleHome" aria-label="Cambiar tema">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+      </div>
       <div class="logo-mark">🌍</div>
       <h1 class="title">Flag<span class="accent">Quiz</span></h1>
       <p class="subtitle">¿Cuántas banderas del mundo reconoces?</p>
@@ -52,6 +53,10 @@
         <span class="hud-val" id="hudStreak">0</span>
         <span class="hud-lbl">racha 🔥</span>
       </div>
+      <button class="theme-toggle theme-toggle--header" id="themeToggleGame" aria-label="Cambiar tema">
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+      </button>
     </header>
 
     <main class="game-main">

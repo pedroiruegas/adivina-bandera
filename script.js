@@ -252,10 +252,12 @@ $('btnNext').addEventListener('click', nextQuestion);
 // =============================================
 //  TEMA
 // =============================================
-$('themeToggle').addEventListener('click', () => {
+function toggleTheme() {
   const html = document.documentElement;
   html.dataset.theme = html.dataset.theme === 'dark' ? 'light' : 'dark';
-});
+}
+$('themeToggleHome').addEventListener('click', toggleTheme);
+$('themeToggleGame').addEventListener('click', toggleTheme);
 
 // =============================================
 //  LÓGICA DEL JUEGO
@@ -308,7 +310,13 @@ function renderQuestion() {
     img.alt = '🏳';
   };
 
-  $('continentTag').textContent = q.continent;
+  const tag = $('continentTag');
+  if (state.numOptions <= 3) {
+    tag.textContent = q.continent;
+    tag.style.visibility = 'visible';
+  } else {
+    tag.style.visibility = 'hidden';
+  }
 
   // Progreso
   const pct = (state.current / state.rounds) * 100;
