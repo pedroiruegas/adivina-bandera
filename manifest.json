@@ -1,0 +1,25 @@
+{
+  "name": "Adivina la Bandera",
+  "short_name": "FlagQuiz",
+  "description": "¿Cuántas banderas del mundo reconoces?",
+  "start_url": "/adivina-bandera/",
+  "scope": "/adivina-bandera/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0a0f",
+  "theme_color": "#7c6fff",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
