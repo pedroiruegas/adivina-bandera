@@ -23,11 +23,11 @@ Juego de geografía donde tienes que adivinar a qué país pertenece cada bander
 
 ## Dificultades
 
-| Modo    | Rondas | Opciones por pregunta |
-|---------|--------|-----------------------|
-| Fácil   | 10     | 3 opciones            |
-| Normal  | 15     | 4 opciones            |
-| Difícil | 20     | 5 opciones            |
+| Modo    | Rondas | Opciones por pregunta | Pista de continente |
+|---------|--------|-----------------------|---------------------|
+| Fácil   | 10     | 3 opciones            | ✅ Sí               |
+| Normal  | 15     | 4 opciones            | ❌ No               |
+| Difícil | 20     | 5 opciones            | ❌ No               |
 
 ## Características
 
@@ -37,6 +37,25 @@ Juego de geografía donde tienes que adivinar a qué país pertenece cada bander
 - 🌙 Modo oscuro / claro con toggle
 - 📱 Diseño responsivo para móvil y escritorio
 - ⚡ Sin frameworks ni dependencias — HTML, CSS y JS puro
+- 📲 Instalable como app (PWA) sin tiendas
+
+## Instalar como app en tu celular
+
+No necesitas ninguna tienda — se instala directo desde el navegador.
+
+**Android (Chrome)**
+1. Entra al link con internet
+2. Espera que cargue completamente
+3. Toca el menú ⋮ → "Añadir a pantalla de inicio"
+4. ¡Listo! Ya aparece como app con su ícono
+
+**iPhone (Safari)**
+1. Entra al link con internet **desde Safari** (no Chrome)
+2. Espera que cargue completamente
+3. Toca el botón compartir □↑ → "Añadir a pantalla de inicio"
+4. ¡Listo! Ya aparece como app con su ícono
+
+> La primera vez que la abras con internet descarga todas las banderas en segundo plano. Después puedes jugar sin conexión. 🌐
 
 ## Tecnologías
 
